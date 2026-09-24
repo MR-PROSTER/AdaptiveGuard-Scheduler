@@ -47,8 +47,10 @@ class Simulation:
 
         from controllers.runtime_monitor import RuntimeMonitor
         from controllers.risk_estimator import RiskEstimator, RiskMetrics
+        from controllers.mode_controller import AdaptiveGuardModeController
         self.monitor = RuntimeMonitor(monitor_interval=self.monitor_interval)
         self.risk_estimator = RiskEstimator()
+        self.mode_controller = AdaptiveGuardModeController()
         self.risk_history: List[RiskMetrics] = []
 
         self.clock: SimulationClock = SimulationClock()
@@ -77,6 +79,16 @@ class Simulation:
             job_states, self.current_time, self.cpu.speed, event_trigger=trigger_name
         )
         self.risk_history.append(risk_snapshot)
+
+        # Update Mode Controller with evaluated risk
+        old_mode = self.mode_controller.current_mode
+        new_mode = self.mode_controller.update(self.current_time, risk_snapshot.r_total)
+        if old_mode != new_mode and self.mode_controller.transitions:
+            last_trans = self.mode_controller.transitions[-1]
+            self._log_timeline(
+                self.current_time,
+                f"MODE TRANSITION: {last_trans.old_mode.value} -> {last_trans.new_mode.value} (Risk={last_trans.risk:.4f})",
+            )
 
     def _check_mode_switch(self) -> None:
         """Check if current running HI job exceeded C_LO, triggering mode switch or task escalation."""
