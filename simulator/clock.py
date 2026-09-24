@@ -13,11 +13,11 @@ class SimulationClock:
 
     def advance_to(self, new_time: float) -> None:
         """Advance current time to target time."""
-        if new_time < self._current_time:
+        if new_time < self._current_time - 1e-7:
             raise ValueError(
                 f"Cannot rewind clock from {self._current_time} to {new_time}"
             )
-        self._current_time = new_time
+        self._current_time = max(self._current_time, new_time)
 
     def step(self, delta: float) -> None:
         """Advance time forward by delta ms."""

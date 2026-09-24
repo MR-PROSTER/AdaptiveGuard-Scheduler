@@ -31,10 +31,10 @@ def calculate_x(tasks: List[Task]) -> float:
     u_hi_lo = sum(t.C_LO / t.period for t in tasks if t.criticality == Criticality.HI)
     u_lo = sum(t.C_LO / t.period for t in tasks if t.criticality == Criticality.LO)
 
-    if u_lo >= 1.0:
-        raise ValueError(f"U_LO ({u_lo:.4f}) must be strictly less than 1.0 to calculate x.")
+    if u_lo >= 1.0 - 1e-6:
+        return 1.0
 
-    return u_hi_lo / (1.0 - u_lo)
+    return min(1.0, max(0.0, u_hi_lo / (1.0 - u_lo)))
 
 
 def virtual_deadline(
