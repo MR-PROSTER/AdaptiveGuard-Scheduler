@@ -7,21 +7,21 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from config.default_config import SimulationConfig
-from workloads.fixed_workload import get_fixed_workload
+from workloads.fixed_workload import get_fixed_workload, WORKLOAD_NAME, print_workload_utilization
 from simulator.simulation import Simulation
 
 
 def main() -> None:
     print("==================================================================")
     print(" AdaptiveGuard: Proactive and Graceful Mixed-Criticality Simulator")
-    print(" Initial Foundation & Data Model Simulation Baseline")
+    print(f" Fixed Workload Benchmark: {WORKLOAD_NAME}")
     print("==================================================================\n")
 
     # Load configuration and workload
     config = SimulationConfig(duration=100.0, cpu_speed=1.0, verbose=True)
     taskset = get_fixed_workload()
 
-    print("Loaded Taskset Configuration:")
+    print(f"Loaded Taskset Configuration ({WORKLOAD_NAME}):")
     print("-" * 66)
     for task in taskset:
         print(
@@ -30,6 +30,9 @@ def main() -> None:
             f"C_LO={task.C_LO:4.1f}ms | C_HI={task.C_HI:4.1f}ms | Offset={task.release_offset:4.1f}ms"
         )
     print("-" * 66)
+    print()
+    print_workload_utilization(taskset)
+    print()
     print(f"Simulation Duration: {config.duration} ms\n")
 
     # Instantiate and execute simulation

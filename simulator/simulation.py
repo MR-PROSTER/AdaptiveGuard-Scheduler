@@ -1,4 +1,4 @@
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, Union
 from simulator.task import Task
 from simulator.job import Job
 from simulator.event import Event, EventType
@@ -24,9 +24,22 @@ class Simulation:
         missed_jobs (List[Job]): Jobs that missed their deadline.
     """
 
-    def __init__(self, tasks: List[Task], config: Optional[SimulationConfig] = None) -> None:
+    def __init__(
+        self,
+        tasks: List[Task],
+        config: Optional[SimulationConfig] = None,
+        scenario: Any = "NORMAL",
+        seed: int = 42,
+        overload_until_seq: int = 3,
+    ) -> None:
         self.tasks: List[Task] = tasks
         self.config: SimulationConfig = config or SimulationConfig()
+        from workloads.fixed_workload import ExecutionScenario
+        if isinstance(scenario, str):
+            scenario = ExecutionScenario(scenario)
+        self.scenario: ExecutionScenario = scenario
+        self.seed: int = seed
+        self.overload_until_seq: int = overload_until_seq
         self.clock: SimulationClock = SimulationClock()
         self.event_queue: EventQueue = EventQueue()
         self.cpu: CPU = CPU(speed=self.config.cpu_speed)
@@ -137,7 +150,15 @@ class Simulation:
         if event.event_type == EventType.JOB_RELEASE:
             task = event.task
             seq_num = event.payload["sequence_num"] if event.payload else 0
-            job = task.generate_job(seq_num)
+            from workloads.fixed_workload import get_job_execution_requirement
+            req_exec = get_job_execution_requirement(
+                task=task,
+                sequence_num=seq_num,
+                scenario=self.scenario,
+                seed=self.seed,
+                overload_until_seq=self.overload_until_seq,
+            )
+            job = task.generate_job(seq_num, execution_budget=req_exec)
 
             self.active_jobs.append(job)
             self.ready_queue.append(job)
