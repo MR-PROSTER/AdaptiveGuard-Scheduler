@@ -40,6 +40,7 @@ class Event:
     priority: int = 0
     seq: int = field(default=0, repr=False)
     payload: Optional[Dict[str, Any]] = None
+    cancelled: bool = False
 
     def __lt__(self, other: "Event") -> bool:
         """Min-heap comparison based on timestamp, priority, and insertion sequence."""
