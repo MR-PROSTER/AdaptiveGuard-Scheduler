@@ -8,6 +8,13 @@ from simulator.clock import SimulationClock
 from config.default_config import SimulationConfig
 
 
+from controllers.runtime_monitor import RuntimeMonitor
+from controllers.risk_estimator import RiskEstimator, RiskMetrics
+from controllers.mode_controller import AdaptiveGuardModeController, SystemMode
+from controllers.degradation_controller import DegradationController
+from controllers.recovery_controller import GradualRecoveryController
+
+
 class Simulation:
     """
     Discrete-Event Simulator for Mixed-Criticality Real-Time Systems.
@@ -45,12 +52,11 @@ class Simulation:
         self.monitor_interval: float = monitor_interval
         self.enable_monitoring: bool = enable_monitoring
 
-        from controllers.runtime_monitor import RuntimeMonitor
-        from controllers.risk_estimator import RiskEstimator, RiskMetrics
-        from controllers.mode_controller import AdaptiveGuardModeController
         self.monitor = RuntimeMonitor(monitor_interval=self.monitor_interval)
         self.risk_estimator = RiskEstimator()
         self.mode_controller = AdaptiveGuardModeController()
+        self.degradation_controller = DegradationController(self.tasks)
+        self.recovery_controller = GradualRecoveryController(self.tasks, self.degradation_controller)
         self.risk_history: List[RiskMetrics] = []
 
         self.clock: SimulationClock = SimulationClock()
@@ -71,7 +77,7 @@ class Simulation:
         self._initialize_simulation()
 
     def _trigger_risk_evaluation(self, trigger_name: str) -> None:
-        """Capture active job state and evaluate risk components."""
+        """Capture active job state, evaluate risk components, and update mode & degradation controllers."""
         if not self.enable_monitoring:
             return
         job_states = self.monitor.monitor_active_jobs(self.active_jobs, self.current_time)
@@ -88,6 +94,25 @@ class Simulation:
             self._log_timeline(
                 self.current_time,
                 f"MODE TRANSITION: {last_trans.old_mode.value} -> {last_trans.new_mode.value} (Risk={last_trans.risk:.4f})",
+            )
+
+        # Update LO task service levels via Degradation and Recovery Controllers
+        old_change_count = len(self.degradation_controller.service_change_log)
+        if new_mode == SystemMode.RECOVERY:
+            self.recovery_controller.update_recovery(
+                self.current_time, new_mode, risk_snapshot.r_total
+            )
+        else:
+            self.degradation_controller.update(
+                self.current_time, new_mode, risk_snapshot.r_total
+            )
+
+        # Log new service changes to timeline
+        new_changes = self.degradation_controller.service_change_log[old_change_count:]
+        for change in new_changes:
+            self._log_timeline(
+                self.current_time,
+                f"SERVICE CHANGE: Task {change.task_name} service {change.old_service:.2f} -> {change.new_service:.2f} (Density={change.utility_density:.4f}, Reason: {change.reason})",
             )
 
     def _check_mode_switch(self) -> None:
@@ -350,6 +375,9 @@ class Simulation:
             if self.config.duration > 0
             else 0.0
         )
+        utility_metrics = self.degradation_controller.calculate_utility_metrics(
+            self.completed_jobs, self.released_jobs
+        )
         return {
             "scheduler": self.scheduler.name,
             "duration": self.config.duration,
@@ -364,6 +392,10 @@ class Simulation:
             "average_response_time": avg_response_time,
             "cpu_busy_time": self.cpu.total_busy_time,
             "cpu_utilization": utilization,
+            "LO_utility": utility_metrics["LO_utility"],
+            "maximum_possible_LO_utility": utility_metrics["maximum_possible_LO_utility"],
+            "LO_utility_ratio": utility_metrics["LO_utility_ratio"],
+            "service_change_log": self.degradation_controller.service_change_log,
             "timeline": self.timeline,
             "risk_history": self.risk_history,
         }

@@ -6,6 +6,17 @@ from controllers.mode_controller import (
     ModeTransition,
     AdaptiveGuardModeController,
 )
+from controllers.degradation_controller import (
+    ALLOWED_SERVICE_LEVELS,
+    calculate_utility_density,
+    rank_lo_tasks_by_utility_density,
+    ServiceChangeEvent,
+    DegradationController,
+)
+from controllers.recovery_controller import (
+    RECOVERY_STEPS,
+    GradualRecoveryController,
+)
 
 __all__ = [
     "RuntimeMonitor",
@@ -16,4 +27,11 @@ __all__ = [
     "SystemMode",
     "ModeTransition",
     "AdaptiveGuardModeController",
+    "ALLOWED_SERVICE_LEVELS",
+    "calculate_utility_density",
+    "rank_lo_tasks_by_utility_density",
+    "ServiceChangeEvent",
+    "DegradationController",
+    "RECOVERY_STEPS",
+    "GradualRecoveryController",
 ]
