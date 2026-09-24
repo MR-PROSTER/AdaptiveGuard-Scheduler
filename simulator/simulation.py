@@ -1,5 +1,5 @@
 from typing import List, Optional, Dict, Any, Union, Tuple
-from simulator.task import Task
+from simulator.task import Task, Criticality
 from simulator.job import Job
 from simulator.event import Event, EventType
 from simulator.event_queue import EventQueue
@@ -56,6 +56,19 @@ class Simulation:
         self._scheduled_completion_events: Dict[str, Event] = {}
 
         self._initialize_simulation()
+
+    def _check_mode_switch(self) -> None:
+        """Check if current running HI job exceeded C_LO, triggering mode switch to HI mode."""
+        current = self.cpu.current_job
+        if (
+            current
+            and current.task.criticality == Criticality.HI
+            and current.executed_time >= current.task.C_LO - 1e-9
+            and current.required_execution > current.task.C_LO
+        ):
+            if hasattr(self.scheduler, "set_mode") and getattr(self.scheduler, "current_mode", None) == Criticality.LO:
+                self.scheduler.set_mode(Criticality.HI)
+                self._log_timeline(self.current_time, "MODE CHANGE: System switched to HI mode")
 
     @property
     def current_time(self) -> float:
@@ -176,6 +189,7 @@ class Simulation:
                 self.cpu.execute(delta, self.current_time)
 
             self.clock.advance_to(event.time)
+            self._check_mode_switch()
 
             # Process event by type
             self._process_event(event)
