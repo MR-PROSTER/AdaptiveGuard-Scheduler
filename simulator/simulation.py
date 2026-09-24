@@ -13,7 +13,7 @@ class Simulation:
     Discrete-Event Simulator for Mixed-Criticality Real-Time Systems.
 
     Supports scheduler selection, ready queue management, preemption, CPU execution,
-    deadline miss detection, timeline generation, and comprehensive metric collection.
+    deadline miss detection, timeline generation, runtime monitoring, and risk estimation.
     """
 
     def __init__(
@@ -24,6 +24,8 @@ class Simulation:
         scenario: Any = "NORMAL",
         seed: int = 42,
         overload_until_seq: int = 3,
+        monitor_interval: float = 0.5,
+        enable_monitoring: bool = True,
     ) -> None:
         self.tasks: List[Task] = tasks
         self.config: SimulationConfig = config or SimulationConfig()
@@ -39,6 +41,15 @@ class Simulation:
         self.scenario: ExecutionScenario = scenario
         self.seed: int = seed
         self.overload_until_seq: int = overload_until_seq
+
+        self.monitor_interval: float = monitor_interval
+        self.enable_monitoring: bool = enable_monitoring
+
+        from controllers.runtime_monitor import RuntimeMonitor
+        from controllers.risk_estimator import RiskEstimator, RiskMetrics
+        self.monitor = RuntimeMonitor(monitor_interval=self.monitor_interval)
+        self.risk_estimator = RiskEstimator()
+        self.risk_history: List[RiskMetrics] = []
 
         self.clock: SimulationClock = SimulationClock()
         self.event_queue: EventQueue = EventQueue()
@@ -57,6 +68,16 @@ class Simulation:
 
         self._initialize_simulation()
 
+    def _trigger_risk_evaluation(self, trigger_name: str) -> None:
+        """Capture active job state and evaluate risk components."""
+        if not self.enable_monitoring:
+            return
+        job_states = self.monitor.monitor_active_jobs(self.active_jobs, self.current_time)
+        risk_snapshot = self.risk_estimator.evaluate(
+            job_states, self.current_time, self.cpu.speed, event_trigger=trigger_name
+        )
+        self.risk_history.append(risk_snapshot)
+
     def _check_mode_switch(self) -> None:
         """Check if current running HI job exceeded C_LO, triggering mode switch or task escalation."""
         current = self.cpu.current_job
@@ -71,10 +92,12 @@ class Simulation:
                     self.scheduler.on_task_overrun(current.task)
                     task_label = self._get_task_short_name(current.task)
                     self._log_timeline(self.current_time, f"ESCALATION: {task_label} escalated to HI behavior")
+                    self._trigger_risk_evaluation(f"HI Task Overrun ({task_label} reached C_LO)")
 
             if hasattr(self.scheduler, "set_mode") and getattr(self.scheduler, "current_mode", None) == Criticality.LO:
                 self.scheduler.set_mode(Criticality.HI)
                 self._log_timeline(self.current_time, "MODE CHANGE: System switched to HI mode")
+                self._trigger_risk_evaluation("Mode Change")
 
     @property
     def current_time(self) -> float:
@@ -98,7 +121,7 @@ class Simulation:
         self.timeline.append((time, event_str))
 
     def _initialize_simulation(self) -> None:
-        """Pre-populate job releases and simulation end event."""
+        """Pre-populate job releases, periodic monitoring, and simulation end event."""
         for task in self.tasks:
             k = 0
             while True:
@@ -114,6 +137,17 @@ class Simulation:
                 )
                 self.event_queue.push(release_event)
                 k += 1
+
+        if self.enable_monitoring and self.monitor_interval > 0:
+            t = 0.0
+            while t < self.config.duration:
+                mon_event = Event(
+                    time=t,
+                    event_type=EventType.MONITOR,
+                    priority=5,
+                )
+                self.event_queue.push(mon_event)
+                t += self.monitor_interval
 
         end_event = Event(
             time=self.config.duration,
@@ -161,6 +195,7 @@ class Simulation:
                         self.current_time,
                         f"{preempted_label} preempted by {candidate_label}",
                     )
+                    self._trigger_risk_evaluation("Preemption")
 
                 self.cpu.assign_job(candidate_job, self.current_time)
                 self._schedule_job_completion(candidate_job)
@@ -230,6 +265,7 @@ class Simulation:
             self._log_timeline(self.current_time, f"{task_label} released")
 
             self.scheduler.on_job_release(job)
+            self._trigger_risk_evaluation("Job Release")
 
             # Schedule deadline event
             deadline_event = Event(
@@ -259,6 +295,10 @@ class Simulation:
                 self.scheduler.on_job_completion(job)
                 self._scheduled_completion_events.pop(job.job_id, None)
                 self.cpu.set_idle(self.current_time)
+                self._trigger_risk_evaluation("Job Completion")
+
+        elif event.event_type == EventType.MONITOR:
+            self._trigger_risk_evaluation("Periodic Monitor (0.5ms)")
 
         elif event.event_type == EventType.DEADLINE:
             job = event.job
@@ -268,8 +308,9 @@ class Simulation:
                     self.missed_jobs.append(job)
                     task_label = self._get_task_short_name(job.task)
                     self._log_timeline(self.current_time, f"{task_label} missed deadline")
+                    self._trigger_risk_evaluation("Deadline Miss")
 
-        elif event.event_type in (EventType.PREEMPTION, EventType.MONITOR, EventType.MODE_CHANGE):
+        elif event.event_type in (EventType.PREEMPTION, EventType.MODE_CHANGE):
             pass
 
     def get_summary(self) -> Dict[str, Any]:
@@ -312,4 +353,5 @@ class Simulation:
             "cpu_busy_time": self.cpu.total_busy_time,
             "cpu_utilization": utilization,
             "timeline": self.timeline,
+            "risk_history": self.risk_history,
         }

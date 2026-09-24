@@ -13,16 +13,14 @@ from workloads.fixed_workload import (
     print_workload_utilization,
     ExecutionScenario,
 )
-from schedulers.classical_mc import ClassicalReactiveMCScheduler
-from schedulers.degraded_edf_vd import EDFVDDegradedScheduler
-from schedulers.flexible_mc import FlexibleMCScheduler
+from schedulers.edf import EDFScheduler
 from simulator.simulation import Simulation
 
 
 def main() -> None:
     print("==================================================================")
     print(" AdaptiveGuard: Proactive and Graceful Mixed-Criticality Simulator")
-    print(f" Baseline Schedulers Evaluation: {WORKLOAD_NAME}")
+    print(" Runtime Monitoring & Risk Estimation Evaluation")
     print("==================================================================\n")
 
     # Load taskset
@@ -41,42 +39,39 @@ def main() -> None:
     print_workload_utilization(taskset)
     print()
 
-    config = SimulationConfig(duration=100.0, cpu_speed=1.0, verbose=False)
+    # Configure simulation for H1_OVERRUN scenario with 0.5ms monitoring interval
+    config = SimulationConfig(duration=40.0, cpu_speed=1.0, verbose=False)
+    edf_scheduler = EDFScheduler()
 
-    scenarios = [
-        ("NORMAL", ExecutionScenario.NORMAL),
-        ("H1_OVERRUN", ExecutionScenario.H1_OVERRUN),
-        ("BOTH_OVERRUN", ExecutionScenario.BOTH_OVERRUN),
-    ]
+    simulation = Simulation(
+        tasks=taskset,
+        config=config,
+        scheduler=edf_scheduler,
+        scenario=ExecutionScenario.H1_OVERRUN,
+        monitor_interval=0.5,
+        enable_monitoring=True,
+    )
 
-    for scenario_name, scenario_enum in scenarios:
-        schedulers = [
-            ClassicalReactiveMCScheduler(),
-            EDFVDDegradedScheduler(tasks=taskset, degraded_service_level=0.50),
-            FlexibleMCScheduler(tasks=taskset),
-        ]
+    print("Executing H1_OVERRUN Scenario with Runtime Risk Monitoring (0.5ms interval)...")
+    summary = simulation.run()
+    print("Simulation Completed Successfully!\n")
 
-        results = []
-        for sched in schedulers:
-            sim = Simulation(tasks=taskset, config=config, scheduler=sched, scenario=scenario_enum)
-            res = sim.run()
-            results.append(res)
+    # Display Risk History Timeline
+    print("=" * 105)
+    print(" RUNTIME RISK ESTIMATION TIMELINE (H1_OVERRUN SCENARIO)")
+    print("=" * 105)
+    print(
+        f"{'Time (ms)':<10} │ {'R_util':<10} │ {'R_laxity':<10} │ {'R_overrun':<10} │ {'R_deadline':<10} │ {'R_total':<10} │ Event / Trigger"
+    )
+    print("─" * 105)
 
-        print("=" * 102)
-        print(f" BASELINE SCHEDULERS COMPARISON: {scenario_name} SCENARIO")
-        print("=" * 102)
-        print(f"{'Metric':<25} │ {'Classical Reactive MC':<23} │ {'EDF-VD + Degraded LO':<23} │ {'Flexible MC':<23}")
-        print("─" * 25 + "┼" + "─" * 25 + "┼" + "─" * 25 + "┼" + "─" * 25)
-
-        row_hi_miss = [f"{r['hi_missed_jobs_count']}" for r in results]
-        row_lo_ratio = [f"{r['lo_completion_ratio'] * 100:.2f}%" for r in results]
-        row_cpu_util = [f"{r['cpu_utilization'] * 100:.2f}%" for r in results]
-
-        print(f"{'HI Deadline Misses':<25} │ {row_hi_miss[0]:<23} │ {row_hi_miss[1]:<23} │ {row_hi_miss[2]:<23}")
-        print(f"{'LO Completion Ratio':<25} │ {row_lo_ratio[0]:<23} │ {row_lo_ratio[1]:<23} │ {row_lo_ratio[2]:<23}")
-        print(f"{'CPU Utilization':<25} │ {row_cpu_util[0]:<23} │ {row_cpu_util[1]:<23} │ {row_cpu_util[2]:<23}")
-        print("=" * 102)
-        print()
+    risk_history = summary["risk_history"]
+    for rm in risk_history:
+        print(
+            f"{rm.timestamp:<10.2f} │ {rm.r_util:<10.4f} │ {rm.r_laxity:<10.4f} │ "
+            f"{rm.r_overrun:<10.4f} │ {rm.r_deadline:<10.4f} │ {rm.r_total:<10.4f} │ {rm.event_trigger}"
+        )
+    print("=" * 105)
 
 
 if __name__ == "__main__":
