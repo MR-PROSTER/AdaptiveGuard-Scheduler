@@ -59,6 +59,11 @@ class Simulation:
         self.recovery_controller = GradualRecoveryController(self.tasks, self.degradation_controller)
         self.risk_history: List[RiskMetrics] = []
 
+        # Overhead Tracking
+        self.scheduler_decision_count: int = 0
+        self.risk_calculation_count: int = 0
+        self.mode_transition_count: int = 0
+
         self.clock: SimulationClock = SimulationClock()
         self.event_queue: EventQueue = EventQueue()
         self.cpu: CPU = CPU(speed=self.config.cpu_speed)
@@ -80,6 +85,10 @@ class Simulation:
         """Capture active job state, evaluate risk components, and update mode & degradation controllers."""
         if not self.enable_monitoring:
             return
+        self.risk_calculation_count += 1
+        if self.config.enable_overhead:
+            self.cpu.total_busy_time += self.config.risk_estimation_overhead
+
         job_states = self.monitor.monitor_active_jobs(self.active_jobs, self.current_time)
         risk_snapshot = self.risk_estimator.evaluate(
             job_states, self.current_time, self.cpu.speed, event_trigger=trigger_name
@@ -89,12 +98,19 @@ class Simulation:
         # Update Mode Controller with evaluated risk
         old_mode = self.mode_controller.current_mode
         new_mode = self.mode_controller.update(self.current_time, risk_snapshot.r_total)
-        if old_mode != new_mode and self.mode_controller.transitions:
-            last_trans = self.mode_controller.transitions[-1]
-            self._log_timeline(
-                self.current_time,
-                f"MODE TRANSITION: {last_trans.old_mode.value} -> {last_trans.new_mode.value} (Risk={last_trans.risk:.4f})",
-            )
+        if old_mode != new_mode:
+            self.mode_transition_count += 1
+            if self.config.enable_overhead:
+                self.cpu.total_busy_time += self.config.mode_transition_overhead
+            if hasattr(self.scheduler, "set_mode"):
+                self.scheduler.set_mode(new_mode)
+
+            if self.mode_controller.transitions:
+                last_trans = self.mode_controller.transitions[-1]
+                self._log_timeline(
+                    self.current_time,
+                    f"MODE TRANSITION: {last_trans.old_mode.value} -> {last_trans.new_mode.value} (Risk={last_trans.risk:.4f})",
+                )
 
         # Update LO task service levels via Degradation and Recovery Controllers
         old_change_count = len(self.degradation_controller.service_change_log)
@@ -207,6 +223,10 @@ class Simulation:
 
     def _schedule_and_dispatch(self) -> None:
         """Evaluate scheduler decision and manage CPU assignment & preemption."""
+        self.scheduler_decision_count += 1
+        if self.config.enable_overhead:
+            self.cpu.total_busy_time += self.config.scheduler_overhead
+
         candidate_job = self.scheduler.select_job(self.current_time)
         current_job = self.cpu.current_job
 
@@ -378,6 +398,21 @@ class Simulation:
         utility_metrics = self.degradation_controller.calculate_utility_metrics(
             self.completed_jobs, self.released_jobs
         )
+
+        sched_overhead = self.scheduler_decision_count * self.config.scheduler_overhead
+        risk_overhead = self.risk_calculation_count * self.config.risk_estimation_overhead
+        trans_overhead = self.mode_transition_count * self.config.mode_transition_overhead
+        total_overhead = (sched_overhead + risk_overhead + trans_overhead) if self.config.enable_overhead else 0.0
+        overhead_pct = (total_overhead / self.config.duration) * 100.0 if (self.config.duration > 0 and self.config.enable_overhead) else 0.0
+
+        mode_switches_count = len(self.mode_controller.transitions)
+        if hasattr(self.scheduler, "transitions") and getattr(self.scheduler, "transitions"):
+            mode_switches_count = max(mode_switches_count, len(getattr(self.scheduler, "transitions")))
+        elif hasattr(self.scheduler, "escalated_tasks") and getattr(self.scheduler, "escalated_tasks"):
+            mode_switches_count = len(getattr(self.scheduler, "escalated_tasks"))
+        elif hasattr(self.scheduler, "current_mode") and getattr(self.scheduler, "current_mode") == Criticality.HI:
+            mode_switches_count = max(mode_switches_count, 1)
+
         return {
             "scheduler": self.scheduler.name,
             "duration": self.config.duration,
@@ -396,6 +431,16 @@ class Simulation:
             "maximum_possible_LO_utility": utility_metrics["maximum_possible_LO_utility"],
             "LO_utility_ratio": utility_metrics["LO_utility_ratio"],
             "service_change_log": self.degradation_controller.service_change_log,
+            "mode_switches_count": mode_switches_count,
+            "enable_overhead": self.config.enable_overhead,
+            "scheduler_decision_count": self.scheduler_decision_count,
+            "risk_calculation_count": self.risk_calculation_count,
+            "mode_transition_count": self.mode_transition_count,
+            "scheduler_overhead": sched_overhead,
+            "risk_overhead": risk_overhead,
+            "transition_overhead": trans_overhead,
+            "total_overhead": total_overhead,
+            "overhead_percentage": overhead_pct,
             "timeline": self.timeline,
             "risk_history": self.risk_history,
         }
