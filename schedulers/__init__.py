@@ -2,6 +2,9 @@
 from schedulers.base_scheduler import BaseScheduler
 from schedulers.edf import EDFScheduler
 from schedulers.edf_vd import EDFVDScheduler, calculate_x, virtual_deadline
+from schedulers.classical_mc import ClassicalReactiveMCScheduler
+from schedulers.degraded_edf_vd import EDFVDDegradedScheduler
+from schedulers.flexible_mc import FlexibleMCScheduler
 
 __all__ = [
     "BaseScheduler",
@@ -9,4 +12,7 @@ __all__ = [
     "EDFVDScheduler",
     "calculate_x",
     "virtual_deadline",
+    "ClassicalReactiveMCScheduler",
+    "EDFVDDegradedScheduler",
+    "FlexibleMCScheduler",
 ]

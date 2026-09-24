@@ -58,7 +58,7 @@ class Simulation:
         self._initialize_simulation()
 
     def _check_mode_switch(self) -> None:
-        """Check if current running HI job exceeded C_LO, triggering mode switch to HI mode."""
+        """Check if current running HI job exceeded C_LO, triggering mode switch or task escalation."""
         current = self.cpu.current_job
         if (
             current
@@ -66,6 +66,12 @@ class Simulation:
             and current.executed_time >= current.task.C_LO - 1e-9
             and current.required_execution > current.task.C_LO
         ):
+            if hasattr(self.scheduler, "on_task_overrun"):
+                if not getattr(self.scheduler, "is_task_escalated", lambda t: False)(current.task):
+                    self.scheduler.on_task_overrun(current.task)
+                    task_label = self._get_task_short_name(current.task)
+                    self._log_timeline(self.current_time, f"ESCALATION: {task_label} escalated to HI behavior")
+
             if hasattr(self.scheduler, "set_mode") and getattr(self.scheduler, "current_mode", None) == Criticality.LO:
                 self.scheduler.set_mode(Criticality.HI)
                 self._log_timeline(self.current_time, "MODE CHANGE: System switched to HI mode")
@@ -272,6 +278,11 @@ class Simulation:
         total_completed = len(self.completed_jobs)
         total_missed = len(self.missed_jobs)
 
+        hi_missed = len([j for j in self.missed_jobs if j.task.criticality == Criticality.HI])
+        lo_released = len([j for j in self.released_jobs if j.task.criticality == Criticality.LO])
+        lo_completed = len([j for j in self.completed_jobs if j.task.criticality == Criticality.LO])
+        lo_completion_ratio = (lo_completed / lo_released) if lo_released > 0 else 1.0
+
         response_times = [
             j.completion_time - j.release_time
             for j in self.completed_jobs
@@ -293,6 +304,10 @@ class Simulation:
             "total_jobs_released": total_released,
             "completed_jobs_count": total_completed,
             "missed_jobs_count": total_missed,
+            "hi_missed_jobs_count": hi_missed,
+            "lo_released_jobs_count": lo_released,
+            "lo_completed_jobs_count": lo_completed,
+            "lo_completion_ratio": lo_completion_ratio,
             "average_response_time": avg_response_time,
             "cpu_busy_time": self.cpu.total_busy_time,
             "cpu_utilization": utilization,
