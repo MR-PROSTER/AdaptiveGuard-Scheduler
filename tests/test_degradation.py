@@ -120,8 +120,8 @@ def test_gradual_recovery_steps():
     tasks = get_stress_20ms_workload()
     deg_controller = DegradationController(tasks=tasks)
 
-    # Set initial service to 0.00 in HI mode
-    deg_controller.update(current_time=0.0, mode=SystemMode.HI, risk=0.85)
+    # Set initial service to 0.00 in HI mode (capacity fully constrained)
+    deg_controller.update(current_time=0.0, mode=SystemMode.HI, risk=0.85, available_capacity=0.0)
     for t in tasks:
         if t.criticality == Criticality.LO:
             assert deg_controller.get_service_level(t.task_id) == 0.00

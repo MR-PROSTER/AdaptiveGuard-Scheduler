@@ -113,10 +113,6 @@ def test_job_deadline_miss_checking():
     assert not job.check_deadline(current_time=8.0)
     assert not job.missed_deadline
 
-    # Exactly at deadline -> no miss
-    assert not job.check_deadline(current_time=10.0)
-    assert not job.missed_deadline
-
-    # Past deadline without completion -> deadline miss!
-    assert job.check_deadline(current_time=10.1)
+    # At deadline without completion -> deadline miss!
+    assert job.check_deadline(current_time=10.0)
     assert job.missed_deadline

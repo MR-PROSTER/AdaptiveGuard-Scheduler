@@ -79,7 +79,7 @@ def run_adaptive_experiment(
                         "U_total_LO": metrics.U_total_LO,
                         "U_total_HI": metrics.U_total_HI,
                         "hi_missed_count": summary["hi_missed_jobs_count"],
-                        "hi_miss_ratio": summary["hi_missed_jobs_count"] / max(1, summary["total_jobs_released"]),
+                        "hi_miss_ratio": summary.get("hi_miss_ratio", summary["hi_missed_jobs_count"] / max(1, summary["total_jobs_released"] - summary["lo_released_jobs_count"])),
                         "lo_completion_ratio": summary["lo_completion_ratio"],
                         "LO_utility": summary["LO_utility"],
                         "maximum_possible_LO_utility": summary["maximum_possible_LO_utility"],

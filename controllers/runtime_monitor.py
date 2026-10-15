@@ -60,13 +60,14 @@ class RuntimeMonitor:
         execution_received = job.executed_time
         remaining_execution = job.remaining_execution
         absolute_deadline = job.absolute_deadline
-        time_to_deadline = absolute_deadline - current_time
+        time_to_deadline = max(0.0, absolute_deadline - current_time)
         laxity = absolute_deadline - current_time - remaining_execution
 
         overrun_status = (
             job.task.criticality == Criticality.HI
             and execution_received >= (job.task.C_LO - 1e-9)
             and not job.completed
+            and job.required_execution > job.task.C_LO
         )
 
         return JobState(

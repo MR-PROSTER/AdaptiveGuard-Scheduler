@@ -1,0 +1,770 @@
+time,running_job,risk,mode,trigger,r_util,r_laxity,r_overrun,r_deadline,service_L1,service_L2,service_L3,service_L4
+0.0,IDLE,0.09,LO,Job Release,0.3,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+0.0,H1,0.195,LO,Job Release,0.65,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+0.0,H1,0.285,LO,Job Release,0.95,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+0.0,H1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+0.0,H1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+0.0,H1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+0.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+0.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+1.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+1.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+2.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+2.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+2.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+2.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+2.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+2.5,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+3.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+3.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+3.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+3.5,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+4.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+4.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+4.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+4.5,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+5.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+5.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+5.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+5.5,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+6.0,H1,0.3,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+6.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+6.0,H2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+6.5,H2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+7.0,H2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+7.5,H2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+8.0,H2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+8.5,H2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+9.0,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+9.0,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+9.0,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+9.0,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+9.5,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+9.5,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+10.0,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+10.0,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+10.5,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+10.5,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+11.0,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+11.0,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+11.5,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+11.5,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+12.0,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+12.0,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+12.5,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+12.5,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+13.0,H2,0.3,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+13.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+13.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+13.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+14.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+14.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+15.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+15.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+16.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+16.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+17.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+17.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+18.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+18.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+19.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+19.0,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+19.5,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+20.0,IDLE,0.12,LO,Job Release,0.4,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+20.0,L3,0.22499999999999998,LO,Job Release,0.75,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+20.0,L3,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+20.0,L3,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+20.0,L3,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+20.0,L3,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+20.0,L3,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+20.0,L3,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+20.0,L3,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+20.5,L3,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+21.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+21.0,L4,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+21.5,L4,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+22.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+22.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+22.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+23.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+23.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+24.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+24.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+24.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+24.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+24.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+24.5,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+25.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+25.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+25.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+25.5,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+26.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+26.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+26.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+26.5,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+27.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+27.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+27.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+27.5,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+28.0,H1,0.3,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+28.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+28.0,H2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+28.5,H2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+29.0,H2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+29.5,H2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+30.0,H2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+30.5,H2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+31.0,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+31.0,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+31.0,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+31.0,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+31.5,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+31.5,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+32.0,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+32.0,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+32.5,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+32.5,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+33.0,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+33.0,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+33.5,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+33.5,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+34.0,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+34.0,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+34.5,H2,0.55,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+34.5,H2,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+35.0,H2,0.3,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+35.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+35.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+35.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+36.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+36.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+37.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+37.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+38.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+38.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+39.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+39.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+40.0,L1,0.15,LO,Job Release,0.5,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+40.0,L1,0.255,LO,Job Release,0.85,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+40.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+40.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+40.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+40.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+40.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+40.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+40.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+40.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+40.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+40.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+41.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+41.0,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+41.5,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+42.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+42.0,L3,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+42.5,L3,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+43.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+43.0,L4,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+43.5,L4,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+44.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+44.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+44.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+45.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+45.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+46.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+46.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+46.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+46.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+46.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+46.5,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+47.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+47.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+47.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+47.5,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+48.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+48.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+48.5,H1,0.58,LO,HI Task Overrun (H1 reached C_LO),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+48.5,H1,0.58,LO,Periodic Monitor (0.5ms),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+49.0,H1,0.61,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+49.0,H1,0.61,WARNING,Periodic Monitor (0.5ms),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+49.5,H1,0.64,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+49.5,H1,0.64,WARNING,Periodic Monitor (0.5ms),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+50.0,H1,0.42,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.4,0.0,0.0,1.0,1.0,1.0,1.0
+50.0,IDLE,0.42,WARNING,Job Completion,1.0,0.4,0.0,0.0,1.0,1.0,1.0,1.0
+50.0,H2,0.42,WARNING,Periodic Monitor (0.5ms),1.0,0.4,0.0,0.0,1.0,1.0,1.0,1.0
+50.5,H2,0.42,WARNING,Periodic Monitor (0.5ms),1.0,0.4,0.0,0.0,1.0,1.0,1.0,1.0
+51.0,H2,0.42,WARNING,Periodic Monitor (0.5ms),1.0,0.4,0.0,0.0,1.0,1.0,1.0,1.0
+51.5,H2,0.42,WARNING,Periodic Monitor (0.5ms),1.0,0.4,0.0,0.0,1.0,1.0,1.0,1.0
+52.0,H2,0.42,WARNING,Periodic Monitor (0.5ms),1.0,0.4,0.0,0.0,1.0,1.0,1.0,1.0
+52.5,H2,0.42,WARNING,Periodic Monitor (0.5ms),1.0,0.4,0.0,0.0,1.0,1.0,1.0,1.0
+53.0,H2,0.6699999999999999,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+53.0,H2,0.6699999999999999,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+53.0,H2,0.6699999999999999,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+53.0,H2,0.6699999999999999,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+53.5,H2,0.6699999999999999,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+53.5,H2,0.6699999999999999,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+54.0,H2,0.6699999999999999,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+54.0,H2,0.6699999999999999,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+54.5,H2,0.6699999999999999,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+54.5,H2,0.6699999999999999,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+55.0,H2,0.6699999999999999,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+55.0,H2,0.6699999999999999,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+55.0,H2,0.6699999999999999,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+55.0,H2,0.6699999999999999,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+55.0,H2,0.6699999999999999,WARNING,Deadline Proximity (H2),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+55.5,H2,0.6849999999999999,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.4,1.0,0.09999999999999998,1.0,1.0,1.0,1.0
+55.5,H2,0.6849999999999999,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.09999999999999998,1.0,1.0,1.0,1.0
+56.0,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.4,1.0,0.19999999999999996,1.0,1.0,1.0,1.0
+56.0,H2,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.19999999999999996,1.0,1.0,1.0,1.0
+56.5,H2,0.715,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.4,1.0,0.30000000000000004,1.0,1.0,1.0,1.0
+56.5,H2,0.715,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.30000000000000004,1.0,1.0,1.0,1.0
+57.0,H2,0.3,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+57.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+57.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+57.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+58.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+58.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+59.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+59.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+60.0,L1,0.18,LO,Job Release,0.6,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+60.0,L1,0.285,LO,Job Release,0.95,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+60.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+60.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+60.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+60.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+60.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+60.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+60.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+60.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+60.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+60.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+61.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+61.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+62.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+62.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+63.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+63.0,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+63.5,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+64.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+64.0,L3,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+64.5,L3,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+65.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+65.0,L4,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+65.5,L4,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+66.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+66.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+66.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+67.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+67.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+68.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+68.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+68.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+68.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+68.5,H1,0.58,LO,HI Task Overrun (H1 reached C_LO),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+68.5,H1,0.58,LO,Periodic Monitor (0.5ms),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+69.0,H1,0.61,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+69.0,H1,0.61,WARNING,Periodic Monitor (0.5ms),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+69.5,H1,0.64,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+69.5,H1,0.64,WARNING,Periodic Monitor (0.5ms),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+70.0,H1,0.6699999999999999,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+70.0,H1,0.6699999999999999,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+70.5,H1,0.7,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+70.5,H1,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+71.0,H1,0.73,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+71.0,H1,0.73,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+71.5,H1,0.76,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.7,1.0,0.0,1.0,1.0,1.0,0.5
+71.5,H1,0.76,WARNING,Periodic Monitor (0.5ms),1.0,0.7,1.0,0.0,1.0,1.0,1.0,0.5
+72.0,H1,0.54,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.8,0.0,0.0,1.0,1.0,1.0,1.0
+72.0,IDLE,0.54,WARNING,Job Completion,1.0,0.8,0.0,0.0,1.0,1.0,1.0,1.0
+72.0,H2,0.54,WARNING,Periodic Monitor (0.5ms),1.0,0.8,0.0,0.0,1.0,1.0,1.0,1.0
+72.5,H2,0.54,WARNING,Periodic Monitor (0.5ms),1.0,0.8,0.0,0.0,1.0,1.0,1.0,1.0
+73.0,H2,0.54,WARNING,Periodic Monitor (0.5ms),1.0,0.8,0.0,0.0,1.0,1.0,1.0,1.0
+73.5,H2,0.54,WARNING,Periodic Monitor (0.5ms),1.0,0.8,0.0,0.0,1.0,1.0,1.0,1.0
+74.0,H2,0.54,WARNING,Periodic Monitor (0.5ms),1.0,0.8,0.0,0.0,1.0,1.0,1.0,1.0
+74.5,H2,0.54,WARNING,Periodic Monitor (0.5ms),1.0,0.8,0.0,0.0,1.0,1.0,1.0,1.0
+75.0,H2,0.79,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.8,1.0,0.0,1.0,1.0,0.25,0.0
+75.0,H2,0.79,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.8,1.0,0.0,1.0,1.0,0.25,0.0
+75.0,H2,0.79,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.8,1.0,0.0,1.0,1.0,0.25,0.0
+75.0,H2,0.79,WARNING,Periodic Monitor (0.5ms),1.0,0.8,1.0,0.0,1.0,1.0,0.25,0.0
+75.0,H2,0.79,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.8,1.0,0.0,1.0,1.0,0.25,0.0
+75.0,H2,0.79,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.8,1.0,0.0,1.0,1.0,0.25,0.0
+75.0,H2,0.79,WARNING,Deadline Proximity (H2),1.0,0.8,1.0,0.0,1.0,1.0,0.25,0.0
+75.5,H2,0.805,HI,HI Task Overrun (H2 reached C_LO),1.0,0.8,1.0,0.09999999999999998,1.0,1.0,0.0,0.0
+75.5,H2,0.805,HI,Periodic Monitor (0.5ms),1.0,0.8,1.0,0.09999999999999998,1.0,1.0,0.0,0.0
+76.0,H2,0.8200000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.8,1.0,0.19999999999999996,1.0,1.0,0.0,0.0
+76.0,H2,0.8200000000000001,HI,Periodic Monitor (0.5ms),1.0,0.8,1.0,0.19999999999999996,1.0,1.0,0.0,0.0
+76.5,H2,0.8350000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.8,1.0,0.30000000000000004,1.0,1.0,0.0,0.0
+76.5,H2,0.8350000000000001,HI,Periodic Monitor (0.5ms),1.0,0.8,1.0,0.30000000000000004,1.0,1.0,0.0,0.0
+77.0,H2,0.8500000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.8,1.0,0.4,1.0,1.0,0.0,0.0
+77.0,H2,0.8500000000000001,HI,Periodic Monitor (0.5ms),1.0,0.8,1.0,0.4,1.0,1.0,0.0,0.0
+77.5,H2,0.865,HI,HI Task Overrun (H2 reached C_LO),1.0,0.8,1.0,0.5,1.0,1.0,0.0,0.0
+77.5,H2,0.865,HI,Periodic Monitor (0.5ms),1.0,0.8,1.0,0.5,1.0,1.0,0.0,0.0
+78.0,H2,0.88,HI,HI Task Overrun (H2 reached C_LO),1.0,0.8,1.0,0.6,1.0,1.0,0.0,0.0
+78.0,H2,0.88,HI,Periodic Monitor (0.5ms),1.0,0.8,1.0,0.6,1.0,1.0,0.0,0.0
+78.5,H2,0.895,HI,HI Task Overrun (H2 reached C_LO),1.0,0.8,1.0,0.7,1.0,1.0,0.0,0.0
+78.5,H2,0.895,HI,Periodic Monitor (0.5ms),1.0,0.8,1.0,0.7,1.0,1.0,0.0,0.0
+79.0,H2,0.3,HI,HI Task Overrun (H2 reached C_LO),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+79.0,IDLE,0.3,HI,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+79.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+79.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+80.0,L1,0.18,HI,Job Release,0.6,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+80.0,L1,0.285,HI,Job Release,0.95,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+80.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+80.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+80.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+80.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+80.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+80.0,L1,0.3,HI,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+80.0,L1,0.3,HI,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+80.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+81.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+81.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+82.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+82.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+83.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+83.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+84.0,IDLE,0.3,RECOVERY,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,0.75,0.5,0.25,0.0
+84.5,IDLE,0.3,RECOVERY,Job Completion,1.0,0.0,0.0,0.0,0.75,0.5,0.25,0.0
+84.5,H1,0.3,RECOVERY,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,0.75,0.5,0.25,0.0
+85.0,H1,0.3,RECOVERY,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,0.75,0.5,0.25
+85.5,H1,0.3,RECOVERY,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,0.75,0.5,0.25
+86.0,H1,0.3,RECOVERY,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.75,0.5
+86.5,H1,0.55,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+86.5,H1,0.55,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+86.5,H1,0.55,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+86.5,H1,0.55,WARNING,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+87.0,H1,0.55,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+87.0,H1,0.55,WARNING,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+87.5,H1,0.55,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+87.5,H1,0.55,WARNING,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+88.0,H1,0.55,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+88.0,H1,0.55,WARNING,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+88.5,H1,0.58,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+88.5,H1,0.58,WARNING,Periodic Monitor (0.5ms),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+89.0,H1,0.61,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+89.0,H1,0.61,WARNING,Periodic Monitor (0.5ms),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+89.5,H1,0.64,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+89.5,H1,0.64,WARNING,Periodic Monitor (0.5ms),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+90.0,H1,0.6699999999999999,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+90.0,H1,0.6699999999999999,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+90.5,H1,0.44999999999999996,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+90.5,IDLE,0.44999999999999996,WARNING,Job Completion,1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+90.5,H2,0.44999999999999996,WARNING,Periodic Monitor (0.5ms),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+91.0,H2,0.44999999999999996,WARNING,Periodic Monitor (0.5ms),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+91.5,H2,0.44999999999999996,WARNING,Periodic Monitor (0.5ms),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+92.0,H2,0.44999999999999996,WARNING,Periodic Monitor (0.5ms),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+92.5,H2,0.44999999999999996,WARNING,Periodic Monitor (0.5ms),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+93.0,H2,0.44999999999999996,WARNING,Periodic Monitor (0.5ms),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+93.5,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+93.5,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+93.5,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+93.5,H2,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+94.0,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+94.0,H2,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+94.5,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+94.5,H2,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+95.0,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+95.0,H2,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+95.0,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+95.0,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+95.0,H2,0.7,WARNING,Deadline Proximity (H2),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+95.5,H2,0.715,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.09999999999999998,1.0,1.0,1.0,1.0
+95.5,H2,0.715,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.09999999999999998,1.0,1.0,1.0,1.0
+96.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.19999999999999996,1.0,1.0,1.0,1.0
+96.0,H2,0.73,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.19999999999999996,1.0,1.0,1.0,1.0
+96.5,H2,0.745,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.30000000000000004,1.0,1.0,1.0,1.0
+96.5,H2,0.745,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.30000000000000004,1.0,1.0,1.0,1.0
+97.0,H2,0.76,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.4,1.0,1.0,1.0,0.5
+97.0,H2,0.76,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.4,1.0,1.0,1.0,0.5
+97.5,H2,0.3,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+97.5,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+97.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+98.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+98.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+99.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+99.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+100.0,L1,0.1575,LO,Job Release,0.525,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+100.0,L1,0.2625,LO,Job Release,0.875,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+100.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+100.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+100.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+100.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+100.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+100.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+100.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+100.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+101.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+101.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+102.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+102.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+103.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+103.5,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+103.5,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+104.0,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+104.5,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+104.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+105.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+105.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+106.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+106.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+106.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+106.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+106.5,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+107.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+107.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+107.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+107.5,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+108.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+108.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+108.5,H1,0.58,LO,HI Task Overrun (H1 reached C_LO),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+108.5,H1,0.58,LO,Periodic Monitor (0.5ms),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+109.0,H1,0.61,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+109.0,H1,0.61,WARNING,Periodic Monitor (0.5ms),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+109.5,H1,0.64,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+109.5,H1,0.64,WARNING,Periodic Monitor (0.5ms),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+110.0,H1,0.6699999999999999,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+110.0,H1,0.6699999999999999,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+110.5,H1,0.44999999999999996,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+110.5,IDLE,0.44999999999999996,WARNING,Job Completion,1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+110.5,H2,0.44999999999999996,WARNING,Periodic Monitor (0.5ms),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+111.0,H2,0.44999999999999996,WARNING,Periodic Monitor (0.5ms),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+111.5,H2,0.44999999999999996,WARNING,Periodic Monitor (0.5ms),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+112.0,H2,0.44999999999999996,WARNING,Periodic Monitor (0.5ms),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+112.5,H2,0.44999999999999996,WARNING,Periodic Monitor (0.5ms),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+113.0,H2,0.44999999999999996,WARNING,Periodic Monitor (0.5ms),1.0,0.5,0.0,0.0,1.0,1.0,1.0,1.0
+113.5,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+113.5,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+113.5,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+113.5,H2,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+114.0,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+114.0,H2,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+114.5,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+114.5,H2,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+115.0,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+115.0,H2,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+115.0,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+115.0,H2,0.7,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+115.0,H2,0.7,WARNING,Deadline Proximity (H2),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+115.5,H2,0.715,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.09999999999999998,1.0,1.0,1.0,1.0
+115.5,H2,0.715,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.09999999999999998,1.0,1.0,1.0,1.0
+116.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.19999999999999996,1.0,1.0,1.0,1.0
+116.0,H2,0.73,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.19999999999999996,1.0,1.0,1.0,1.0
+116.5,H2,0.745,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.30000000000000004,1.0,1.0,1.0,1.0
+116.5,H2,0.745,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.30000000000000004,1.0,1.0,1.0,1.0
+117.0,H2,0.76,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.5,1.0,0.4,1.0,1.0,1.0,0.5
+117.0,H2,0.76,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.4,1.0,1.0,1.0,0.5
+117.5,H2,0.3,LO,HI Task Overrun (H2 reached C_LO),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+117.5,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+117.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+118.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+118.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+119.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+119.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+120.0,L1,0.1875,LO,Job Release,0.625,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+120.0,L1,0.2925,LO,Job Release,0.975,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+120.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+120.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+120.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+120.0,L1,0.3,LO,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+120.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+120.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+120.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+120.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+120.0,L1,0.3,LO,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+120.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+121.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+121.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+122.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+122.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+123.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+123.5,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+123.5,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+124.0,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+124.5,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+124.5,L3,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+125.0,L3,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+125.5,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+125.5,L4,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+126.0,L4,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+126.5,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+126.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+127.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+127.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+128.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+128.5,H1,0.58,LO,HI Task Overrun (H1 reached C_LO),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+128.5,H1,0.58,LO,HI Task Overrun (H1 reached C_LO),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+128.5,H1,0.58,LO,HI Task Overrun (H1 reached C_LO),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+128.5,H1,0.58,LO,Periodic Monitor (0.5ms),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+129.0,H1,0.61,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+129.0,H1,0.61,WARNING,Periodic Monitor (0.5ms),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+129.5,H1,0.64,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+129.5,H1,0.64,WARNING,Periodic Monitor (0.5ms),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+130.0,H1,0.6699999999999999,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+130.0,H1,0.6699999999999999,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+130.5,H1,0.7,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+130.5,H1,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+131.0,H1,0.73,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+131.0,H1,0.73,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+131.5,H1,0.76,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.7,1.0,0.0,1.0,1.0,1.0,0.5
+131.5,H1,0.76,WARNING,Periodic Monitor (0.5ms),1.0,0.7,1.0,0.0,1.0,1.0,1.0,0.5
+132.0,H1,0.79,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.8,1.0,0.0,1.0,1.0,0.25,0.0
+132.0,H1,0.79,WARNING,Periodic Monitor (0.5ms),1.0,0.8,1.0,0.0,1.0,1.0,0.25,0.0
+132.5,H1,0.5700000000000001,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+132.5,IDLE,0.5700000000000001,WARNING,Job Completion,1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+132.5,H2,0.5700000000000001,WARNING,Periodic Monitor (0.5ms),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+133.0,H2,0.5700000000000001,WARNING,Periodic Monitor (0.5ms),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+133.5,H2,0.5700000000000001,WARNING,Periodic Monitor (0.5ms),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+134.0,H2,0.5700000000000001,WARNING,Periodic Monitor (0.5ms),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+134.5,H2,0.5700000000000001,WARNING,Periodic Monitor (0.5ms),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+135.0,H2,0.5700000000000001,WARNING,Periodic Monitor (0.5ms),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+135.0,H2,0.5700000000000001,WARNING,Deadline Proximity (H2),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+135.5,H2,0.8350000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.09999999999999998,1.0,1.0,0.0,0.0
+135.5,H2,0.8350000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.09999999999999998,1.0,1.0,0.0,0.0
+135.5,H2,0.8350000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.09999999999999998,1.0,1.0,0.0,0.0
+135.5,H2,0.8350000000000001,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.09999999999999998,1.0,1.0,0.0,0.0
+136.0,H2,0.8500000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.19999999999999996,1.0,1.0,0.0,0.0
+136.0,H2,0.8500000000000001,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.19999999999999996,1.0,1.0,0.0,0.0
+136.5,H2,0.8650000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.30000000000000004,1.0,1.0,0.0,0.0
+136.5,H2,0.8650000000000001,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.30000000000000004,1.0,1.0,0.0,0.0
+137.0,H2,0.8800000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.4,1.0,1.0,0.0,0.0
+137.0,H2,0.8800000000000001,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.4,1.0,1.0,0.0,0.0
+137.5,H2,0.895,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.5,1.0,1.0,0.0,0.0
+137.5,H2,0.895,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.5,1.0,1.0,0.0,0.0
+138.0,H2,0.91,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.6,1.0,1.0,0.0,0.0
+138.0,H2,0.91,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.6,1.0,1.0,0.0,0.0
+138.5,H2,0.925,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.7,1.0,1.0,0.0,0.0
+138.5,H2,0.925,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.7,1.0,1.0,0.0,0.0
+139.0,H2,0.9400000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.8,1.0,1.0,0.0,0.0
+139.0,H2,0.9400000000000001,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.8,1.0,1.0,0.0,0.0
+139.5,H2,0.3,HI,HI Task Overrun (H2 reached C_LO),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+139.5,IDLE,0.3,HI,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+139.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+140.0,L1,0.1875,HI,Job Release,0.625,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+140.0,L1,0.2925,HI,Job Release,0.975,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+140.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+140.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+140.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+140.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+140.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+140.0,L1,0.3,HI,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+140.0,L1,0.3,HI,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+140.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+141.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+141.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+142.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+142.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+143.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+143.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+144.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+144.5,L1,0.3,RECOVERY,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+145.0,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+145.5,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+145.5,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+146.0,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+146.5,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+146.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+147.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+147.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+148.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+148.5,H1,0.58,LO,HI Task Overrun (H1 reached C_LO),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+148.5,H1,0.58,LO,HI Task Overrun (H1 reached C_LO),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+148.5,H1,0.58,LO,HI Task Overrun (H1 reached C_LO),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+148.5,H1,0.58,LO,Periodic Monitor (0.5ms),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+149.0,H1,0.61,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+149.0,H1,0.61,WARNING,Periodic Monitor (0.5ms),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+149.5,H1,0.64,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+149.5,H1,0.64,WARNING,Periodic Monitor (0.5ms),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+150.0,H1,0.6699999999999999,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+150.0,H1,0.6699999999999999,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+150.5,H1,0.7,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+150.5,H1,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+151.0,H1,0.73,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+151.0,H1,0.73,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+151.5,H1,0.76,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.7,1.0,0.0,1.0,1.0,1.0,0.5
+151.5,H1,0.76,WARNING,Periodic Monitor (0.5ms),1.0,0.7,1.0,0.0,1.0,1.0,1.0,0.5
+152.0,H1,0.79,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.8,1.0,0.0,1.0,1.0,0.25,0.0
+152.0,H1,0.79,WARNING,Periodic Monitor (0.5ms),1.0,0.8,1.0,0.0,1.0,1.0,0.25,0.0
+152.5,H1,0.5700000000000001,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+152.5,IDLE,0.5700000000000001,WARNING,Job Completion,1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+152.5,H2,0.5700000000000001,WARNING,Periodic Monitor (0.5ms),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+153.0,H2,0.5700000000000001,WARNING,Periodic Monitor (0.5ms),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+153.5,H2,0.5700000000000001,WARNING,Periodic Monitor (0.5ms),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+154.0,H2,0.5700000000000001,WARNING,Periodic Monitor (0.5ms),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+154.5,H2,0.5700000000000001,WARNING,Periodic Monitor (0.5ms),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+155.0,H2,0.5700000000000001,WARNING,Periodic Monitor (0.5ms),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+155.0,H2,0.5700000000000001,WARNING,Deadline Proximity (H2),1.0,0.9,0.0,0.0,1.0,1.0,1.0,1.0
+155.5,H2,0.8350000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.09999999999999998,1.0,1.0,0.0,0.0
+155.5,H2,0.8350000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.09999999999999998,1.0,1.0,0.0,0.0
+155.5,H2,0.8350000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.09999999999999998,1.0,1.0,0.0,0.0
+155.5,H2,0.8350000000000001,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.09999999999999998,1.0,1.0,0.0,0.0
+156.0,H2,0.8500000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.19999999999999996,1.0,1.0,0.0,0.0
+156.0,H2,0.8500000000000001,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.19999999999999996,1.0,1.0,0.0,0.0
+156.5,H2,0.8650000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.30000000000000004,1.0,1.0,0.0,0.0
+156.5,H2,0.8650000000000001,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.30000000000000004,1.0,1.0,0.0,0.0
+157.0,H2,0.8800000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.4,1.0,1.0,0.0,0.0
+157.0,H2,0.8800000000000001,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.4,1.0,1.0,0.0,0.0
+157.5,H2,0.895,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.5,1.0,1.0,0.0,0.0
+157.5,H2,0.895,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.5,1.0,1.0,0.0,0.0
+158.0,H2,0.91,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.6,1.0,1.0,0.0,0.0
+158.0,H2,0.91,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.6,1.0,1.0,0.0,0.0
+158.5,H2,0.925,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.7,1.0,1.0,0.0,0.0
+158.5,H2,0.925,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.7,1.0,1.0,0.0,0.0
+159.0,H2,0.9400000000000001,HI,HI Task Overrun (H2 reached C_LO),1.0,0.9,1.0,0.8,1.0,1.0,0.0,0.0
+159.0,H2,0.9400000000000001,HI,Periodic Monitor (0.5ms),1.0,0.9,1.0,0.8,1.0,1.0,0.0,0.0
+159.5,H2,0.3,HI,HI Task Overrun (H2 reached C_LO),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+159.5,IDLE,0.3,HI,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+159.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+160.0,L1,0.1875,HI,Job Release,0.625,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+160.0,L1,0.2925,HI,Job Release,0.975,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+160.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+160.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+160.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+160.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+160.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+160.0,L1,0.3,HI,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+160.0,L1,0.3,HI,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+160.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+161.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+161.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+162.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+162.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+163.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+163.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+164.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+164.5,IDLE,0.3,RECOVERY,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,0.75,0.5,0.25,0.0
+165.0,IDLE,0.3,RECOVERY,Job Completion,1.0,0.0,0.0,0.0,0.75,0.5,0.25,0.0
+165.0,H1,0.3,RECOVERY,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,0.75,0.5,0.25,0.0
+165.5,H1,0.3,RECOVERY,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,0.75,0.5,0.25
+166.0,H1,0.3,RECOVERY,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,0.75,0.5,0.25
+166.5,H1,0.3,RECOVERY,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.75,0.5
+167.0,H1,0.55,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+167.0,H1,0.55,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+167.0,H1,0.55,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+167.0,H1,0.55,WARNING,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+167.5,H1,0.55,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+167.5,H1,0.55,WARNING,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+168.0,H1,0.55,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+168.0,H1,0.55,WARNING,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+168.5,H1,0.58,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+168.5,H1,0.58,WARNING,Periodic Monitor (0.5ms),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+169.0,H1,0.61,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+169.0,H1,0.61,WARNING,Periodic Monitor (0.5ms),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+169.5,H1,0.64,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+169.5,H1,0.64,WARNING,Periodic Monitor (0.5ms),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+170.0,H1,0.6699999999999999,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+170.0,H1,0.6699999999999999,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+170.5,H1,0.7,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+170.5,H1,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+171.0,H1,0.48,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+171.0,IDLE,0.48,WARNING,Job Completion,1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+171.0,H2,0.48,WARNING,Periodic Monitor (0.5ms),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+171.5,H2,0.48,WARNING,Periodic Monitor (0.5ms),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+172.0,H2,0.48,WARNING,Periodic Monitor (0.5ms),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+172.5,H2,0.48,WARNING,Periodic Monitor (0.5ms),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+173.0,H2,0.48,WARNING,Periodic Monitor (0.5ms),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+173.5,H2,0.48,WARNING,Periodic Monitor (0.5ms),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+174.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+174.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+174.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+174.0,H2,0.73,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+174.5,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+174.5,H2,0.73,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+175.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+175.0,H2,0.73,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+175.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+175.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+175.0,H2,0.73,WARNING,Deadline Proximity (H2),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+175.5,H2,0.745,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.09999999999999998,1.0,1.0,1.0,1.0
+175.5,H2,0.745,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.09999999999999998,1.0,1.0,1.0,1.0
+176.0,H2,0.76,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.19999999999999996,1.0,1.0,1.0,0.5
+176.0,H2,0.76,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.19999999999999996,1.0,1.0,1.0,0.5
+176.5,H2,0.775,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.30000000000000004,1.0,1.0,1.0,0.0
+176.5,H2,0.775,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.30000000000000004,1.0,1.0,1.0,0.0
+177.0,H2,0.79,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.4,1.0,1.0,0.25,0.0
+177.0,H2,0.79,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.4,1.0,1.0,0.25,0.0
+177.5,H2,0.8049999999999999,HI,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.5,1.0,1.0,0.0,0.0
+177.5,H2,0.8049999999999999,HI,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.5,1.0,1.0,0.0,0.0
+178.0,H2,0.3,HI,HI Task Overrun (H2 reached C_LO),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+178.0,IDLE,0.3,HI,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+178.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+178.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+179.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+179.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+180.0,L1,0.165,HI,Job Release,0.55,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+180.0,L1,0.27,HI,Job Release,0.9,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+180.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+180.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+180.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+180.0,L1,0.3,HI,Job Release,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+180.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+180.0,L1,0.3,HI,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+180.0,L1,0.3,HI,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+180.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+181.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+181.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+182.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+182.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+183.0,L1,0.3,RECOVERY,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+183.5,L1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+184.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+184.0,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+184.5,L2,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+185.0,IDLE,0.3,LO,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+185.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+185.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+186.0,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+186.5,H1,0.3,LO,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+187.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+187.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+187.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+187.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+187.5,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+187.5,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+188.0,H1,0.55,LO,HI Task Overrun (H1 reached C_LO),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+188.0,H1,0.55,LO,Periodic Monitor (0.5ms),1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0
+188.5,H1,0.58,LO,HI Task Overrun (H1 reached C_LO),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+188.5,H1,0.58,LO,Periodic Monitor (0.5ms),1.0,0.09999999999999998,1.0,0.0,1.0,1.0,1.0,1.0
+189.0,H1,0.61,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+189.0,H1,0.61,WARNING,Periodic Monitor (0.5ms),1.0,0.19999999999999996,1.0,0.0,1.0,1.0,1.0,1.0
+189.5,H1,0.64,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+189.5,H1,0.64,WARNING,Periodic Monitor (0.5ms),1.0,0.30000000000000004,1.0,0.0,1.0,1.0,1.0,1.0
+190.0,H1,0.6699999999999999,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+190.0,H1,0.6699999999999999,WARNING,Periodic Monitor (0.5ms),1.0,0.4,1.0,0.0,1.0,1.0,1.0,1.0
+190.5,H1,0.7,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+190.5,H1,0.7,WARNING,Periodic Monitor (0.5ms),1.0,0.5,1.0,0.0,1.0,1.0,1.0,1.0
+191.0,H1,0.48,WARNING,HI Task Overrun (H1 reached C_LO),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+191.0,IDLE,0.48,WARNING,Job Completion,1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+191.0,H2,0.48,WARNING,Periodic Monitor (0.5ms),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+191.5,H2,0.48,WARNING,Periodic Monitor (0.5ms),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+192.0,H2,0.48,WARNING,Periodic Monitor (0.5ms),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+192.5,H2,0.48,WARNING,Periodic Monitor (0.5ms),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+193.0,H2,0.48,WARNING,Periodic Monitor (0.5ms),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+193.5,H2,0.48,WARNING,Periodic Monitor (0.5ms),1.0,0.6,0.0,0.0,1.0,1.0,1.0,1.0
+194.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+194.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+194.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+194.0,H2,0.73,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+194.5,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+194.5,H2,0.73,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+195.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+195.0,H2,0.73,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+195.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+195.0,H2,0.73,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+195.0,H2,0.73,WARNING,Deadline Proximity (H2),1.0,0.6,1.0,0.0,1.0,1.0,1.0,1.0
+195.5,H2,0.745,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.09999999999999998,1.0,1.0,1.0,1.0
+195.5,H2,0.745,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.09999999999999998,1.0,1.0,1.0,1.0
+196.0,H2,0.76,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.19999999999999996,1.0,1.0,1.0,0.5
+196.0,H2,0.76,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.19999999999999996,1.0,1.0,1.0,0.5
+196.5,H2,0.775,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.30000000000000004,1.0,1.0,1.0,0.0
+196.5,H2,0.775,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.30000000000000004,1.0,1.0,1.0,0.0
+197.0,H2,0.79,WARNING,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.4,1.0,1.0,0.25,0.0
+197.0,H2,0.79,WARNING,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.4,1.0,1.0,0.25,0.0
+197.5,H2,0.8049999999999999,HI,HI Task Overrun (H2 reached C_LO),1.0,0.6,1.0,0.5,1.0,1.0,0.0,0.0
+197.5,H2,0.8049999999999999,HI,Periodic Monitor (0.5ms),1.0,0.6,1.0,0.5,1.0,1.0,0.0,0.0
+198.0,H2,0.3,HI,HI Task Overrun (H2 reached C_LO),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+198.0,IDLE,0.3,HI,Job Completion,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+198.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+198.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+199.0,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+199.5,L1,0.3,HI,Periodic Monitor (0.5ms),1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+200.0,L1,0.3,HI,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+200.0,L1,0.3,HI,Deadline Miss,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0

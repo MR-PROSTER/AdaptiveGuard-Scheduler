@@ -84,6 +84,7 @@ class Task:
         release_time = self.release_offset + sequence_num * self.period
         absolute_deadline = release_time + self.relative_deadline
         required_exec = execution_budget if execution_budget is not None else self.C_LO
+        nominal_exec = self.C_LO if self.criticality == Criticality.LO else required_exec
         job_id = f"T{self.task_id}_J{sequence_num}"
 
         return Job(
@@ -93,5 +94,6 @@ class Task:
             absolute_deadline=absolute_deadline,
             required_execution=required_exec,
             remaining_execution=required_exec,
+            nominal_execution=nominal_exec,
             sequence_num=sequence_num,
         )

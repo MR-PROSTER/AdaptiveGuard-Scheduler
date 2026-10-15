@@ -31,12 +31,17 @@ class Job:
     absolute_deadline: float
     required_execution: float
     remaining_execution: float
+    nominal_execution: float = 0.0
     sequence_num: int = 0
     executed_time: float = 0.0
     start_time: Optional[float] = None
     completion_time: Optional[float] = None
     completed: bool = False
     missed_deadline: bool = False
+
+    def __post_init__(self) -> None:
+        if self.nominal_execution <= 0.0:
+            self.nominal_execution = self.required_execution
 
     def execute(self, duration: float) -> float:
         """
@@ -51,9 +56,15 @@ class Job:
         if self.completed or duration <= 0:
             return 0.0
 
+        assert not self.completed, f"Completed job {self.job_id} cannot execute further!"
+
         actual_exec = min(duration, self.remaining_execution)
         self.executed_time += actual_exec
         self.remaining_execution -= actual_exec
+
+        assert self.remaining_execution >= -1e-9, (
+            f"Remaining execution cannot become negative: {self.remaining_execution}"
+        )
 
         if self.remaining_execution <= 1e-9:
             self.remaining_execution = 0.0
@@ -68,7 +79,7 @@ class Job:
         Returns:
             bool: True if deadline is missed, False otherwise.
         """
-        if not self.completed and current_time > self.absolute_deadline:
+        if not self.completed and current_time >= (self.absolute_deadline - 1e-9):
             self.missed_deadline = True
             return True
         return False

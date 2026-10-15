@@ -74,6 +74,8 @@ class FlexibleMCScheduler(BaseScheduler):
 
     def add_job(self, job: Job) -> None:
         """Add job to ready queue."""
+        if job.completed:
+            return
         if job not in self.ready_queue:
             self.ready_queue.append(job)
 
@@ -84,9 +86,10 @@ class FlexibleMCScheduler(BaseScheduler):
 
     def select_job(self, current_time: float) -> Optional[Job]:
         """Select highest priority job from ready queue."""
-        if not self.ready_queue:
+        active = [j for j in self.ready_queue if not j.completed and j.remaining_execution > 1e-9]
+        if not active:
             return None
-        return min(self.ready_queue, key=self._get_priority_key)
+        return min(active, key=self._get_priority_key)
 
     def should_preempt(self, current_job: Optional[Job], candidate_job: Optional[Job]) -> bool:
         """Check if candidate_job should preempt current_job."""

@@ -15,6 +15,7 @@ class EventType(Enum):
     MONITOR = auto()
     MODE_CHANGE = auto()
     DEADLINE = auto()
+    DEADLINE_PROXIMITY = auto()
     SIMULATION_END = auto()
 
 

@@ -34,8 +34,8 @@ class EDFScheduler(BaseScheduler):
         return (job.absolute_deadline, crit_order, job.release_time, job.task.task_id)
 
     def add_job(self, job: Job) -> None:
-        """Add job to ready queue if not already present."""
-        if job not in self.ready_queue:
+        """Add job to ready queue if not already present and not completed."""
+        if job not in self.ready_queue and not job.completed and job.remaining_execution > 1e-9:
             self.ready_queue.append(job)
 
     def remove_job(self, job: Job) -> None:
@@ -47,9 +47,10 @@ class EDFScheduler(BaseScheduler):
         """
         Select the job with highest priority (smallest priority key) from ready queue.
         """
-        if not self.ready_queue:
+        active = [j for j in self.ready_queue if not j.completed and j.remaining_execution > 1e-9]
+        if not active:
             return None
-        return min(self.ready_queue, key=self._get_priority_key)
+        return min(active, key=self._get_priority_key)
 
     def should_preempt(self, current_job: Optional[Job], candidate_job: Optional[Job]) -> bool:
         """

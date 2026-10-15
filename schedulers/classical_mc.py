@@ -30,11 +30,13 @@ class ClassicalReactiveMCScheduler(BaseScheduler):
         super().__init__(name="Classical Reactive MC")
         self.current_mode: Criticality = initial_mode
 
-    def set_mode(self, new_mode: Criticality) -> None:
+    def set_mode(self, new_mode: Any) -> None:
         """Handle global mode switch LO -> HI."""
-        if self.current_mode != new_mode:
-            self.current_mode = new_mode
-            if new_mode == Criticality.HI:
+        from controllers.mode_controller import is_hi_mode
+        mapped = Criticality.HI if is_hi_mode(new_mode) else Criticality.LO
+        if self.current_mode != mapped:
+            self.current_mode = mapped
+            if self.current_mode == Criticality.HI:
                 # Suspend/drop all LO tasks from ready queue upon mode switch
                 self.ready_queue = [
                     job for job in self.ready_queue if job.task.criticality == Criticality.HI
@@ -47,7 +49,7 @@ class ClassicalReactiveMCScheduler(BaseScheduler):
 
     def add_job(self, job: Job) -> None:
         """Add job to ready queue, dropping LO jobs if in HI mode."""
-        if job not in self.ready_queue:
+        if job not in self.ready_queue and not job.completed:
             if self.current_mode == Criticality.HI and job.task.criticality == Criticality.LO:
                 return
             self.ready_queue.append(job)
@@ -59,9 +61,10 @@ class ClassicalReactiveMCScheduler(BaseScheduler):
 
     def select_job(self, current_time: float) -> Optional[Job]:
         """Select highest priority job from ready queue."""
-        if not self.ready_queue:
+        active = [j for j in self.ready_queue if not j.completed and j.remaining_execution > 1e-9]
+        if not active:
             return None
-        return min(self.ready_queue, key=self._get_priority_key)
+        return min(active, key=self._get_priority_key)
 
     def should_preempt(self, current_job: Optional[Job], candidate_job: Optional[Job]) -> bool:
         """Determine if candidate_job has strictly higher priority than current_job."""

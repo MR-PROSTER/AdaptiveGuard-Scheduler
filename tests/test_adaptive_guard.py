@@ -92,3 +92,66 @@ def test_all_schedulers_instantiation():
     assert len(schedulers) == 7
     for s in schedulers:
         assert s.name is not None
+
+
+def test_adaptive_guard_safety_assertions():
+    """Verify safety assertions in AdaptiveGuard scheduler."""
+    tasks = get_stress_20ms_workload()
+    scheduler = AdaptiveGuardScheduler(tasks=tasks)
+    config = SimulationConfig(duration=40.0, verbose=False)
+
+    sim = Simulation(
+        tasks=tasks,
+        config=config,
+        scheduler=scheduler,
+        scenario=ExecutionScenario.BOTH_OVERRUN,
+        enable_monitoring=True,
+    )
+    summary = sim.run()
+
+    # Verify scheduling decisions instrumentation
+    decisions = summary["scheduling_decisions"]
+    assert len(decisions) > 0
+    for d in decisions:
+        assert "time" in d
+        assert "mode" in d
+        assert "risk" in d
+        assert "selected_job" in d
+        assert "selected_job_criticality" in d
+        assert "selected_job_deadline" in d
+        assert "selected_job_laxity" in d
+        assert "lo_service_allocations" in d
+        assert "reason" in d
+
+        # Invariant: Risk must remain in [0,1]
+        assert 0.0 - 1e-9 <= d["risk"] <= 1.0 + 1e-9
+
+        # Invariant: LO allocations in [0,1]
+        for s in d["lo_service_allocations"].values():
+            assert 0.0 - 1e-9 <= s <= 1.0 + 1e-9
+
+
+def test_adaptive_guard_four_scenarios_execution():
+    """Verify AdaptiveGuard executes all 4 requested scenarios cleanly."""
+    scenarios = [
+        ExecutionScenario.NORMAL,
+        ExecutionScenario.H1_OVERRUN,
+        ExecutionScenario.BOTH_OVERRUN,
+        ExecutionScenario.RECOVERY,
+    ]
+    for sc in scenarios:
+        tasks = get_stress_20ms_workload()
+        scheduler = AdaptiveGuardScheduler(tasks=tasks)
+        config = SimulationConfig(duration=40.0, verbose=False)
+        sim = Simulation(
+            tasks=tasks,
+            config=config,
+            scheduler=scheduler,
+            scenario=sc,
+            enable_monitoring=True,
+        )
+        summary = sim.run()
+        assert summary["scheduler"] == "AdaptiveGuard"
+        assert len(summary["scheduling_decisions"]) > 0
+        assert summary["hi_missed_jobs_count"] == 0
+

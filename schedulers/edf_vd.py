@@ -40,7 +40,7 @@ def calculate_x(tasks: List[Task]) -> float:
 def virtual_deadline(
     job: Job,
     x: float,
-    current_mode: Criticality = Criticality.LO,
+    current_mode: Any = Criticality.LO,
 ) -> float:
     """
     Calculate the effective deadline for a job given scaling factor x and current system mode.
@@ -50,7 +50,8 @@ def virtual_deadline(
       - LO jobs use their actual deadlines
       - In HI mode, HI tasks use their actual deadlines
     """
-    if current_mode == Criticality.LO and job.task.criticality == Criticality.HI:
+    from controllers.mode_controller import is_lo_mode
+    if is_lo_mode(current_mode) and job.task.criticality == Criticality.HI:
         return job.release_time + x * (job.absolute_deadline - job.release_time)
     return job.absolute_deadline
 
@@ -82,11 +83,13 @@ class EDFVDScheduler(BaseScheduler):
         else:
             self.x = 1.0
 
-    def set_mode(self, new_mode: Criticality) -> None:
+    def set_mode(self, new_mode: Any) -> None:
         """Switch current system criticality mode."""
-        if self.current_mode != new_mode:
-            self.current_mode = new_mode
-            if new_mode == Criticality.HI:
+        from controllers.mode_controller import is_hi_mode
+        mapped = Criticality.HI if is_hi_mode(new_mode) else Criticality.LO
+        if self.current_mode != mapped:
+            self.current_mode = mapped
+            if self.current_mode == Criticality.HI:
                 # In standard EDF-VD, upon transition to HI mode, LO tasks are dropped from ready queue
                 self.ready_queue = [
                     job for job in self.ready_queue if job.task.criticality == Criticality.HI
@@ -102,7 +105,7 @@ class EDFVDScheduler(BaseScheduler):
 
     def add_job(self, job: Job) -> None:
         """Add job to ready queue if not already present."""
-        if job not in self.ready_queue:
+        if job not in self.ready_queue and not job.completed:
             # If in HI mode, drop incoming LO jobs
             if self.current_mode == Criticality.HI and job.task.criticality == Criticality.LO:
                 return
@@ -115,9 +118,10 @@ class EDFVDScheduler(BaseScheduler):
 
     def select_job(self, current_time: float) -> Optional[Job]:
         """Select highest priority job from ready queue based on effective deadlines."""
-        if not self.ready_queue:
+        active = [j for j in self.ready_queue if not j.completed and j.remaining_execution > 1e-9]
+        if not active:
             return None
-        return min(self.ready_queue, key=self._get_priority_key)
+        return min(active, key=self._get_priority_key)
 
     def should_preempt(self, current_job: Optional[Job], candidate_job: Optional[Job]) -> bool:
         """Determine if candidate_job has strictly earlier effective deadline than current_job."""

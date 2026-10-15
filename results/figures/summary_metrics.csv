@@ -1,0 +1,7 @@
+scheduler,hi_miss_ratio_mean,hi_miss_ratio_std,lo_utility_ratio_mean,lo_utility_ratio_std,lo_completion_ratio_mean,lo_completion_ratio_std,cpu_utilization_mean,cpu_utilization_std,average_response_time_mean,average_response_time_std,worst_response_time_mean,worst_response_time_std,mode_switches_mean,mode_switches_std,recovery_time_mean,recovery_time_std,total_overhead_mean,total_overhead_std,overhead_percentage_mean,overhead_percentage_std
+AdaptiveGuard,0.3831,0.4059,0.6272,0.4056,0.6994,0.4109,0.9994,0.1494,108.6335,191.7118,239.5137,327.0377,33.2667,55.9815,0.3935,0.9176,149.5068,22.4828,7.4753,1.1241
+Classical Reactive MC,0.2333,0.4302,0.0,0.0,0.0,0.0,0.7066,0.2365,104.8693,193.44,205.0183,347.5388,1.0,0.0,0.0,0.0,41.5887,12.4014,2.0794,0.6201
+EDF,0.7,0.4661,0.7181,0.2458,0.7218,0.2439,0.9503,0.1473,296.5397,263.992,557.7699,436.3218,0.0,0.0,0.0,0.0,46.4627,13.9048,2.3231,0.6952
+EDF-VD,0.2333,0.4302,0.0,0.0,0.0,0.0,0.7066,0.2365,104.8693,193.44,205.0183,347.5388,1.0,0.0,0.0,0.0,41.588,12.402,2.0794,0.6201
+EDF-VD + Degraded LO Service,0.2333,0.4302,0.3331,0.2074,0.6982,0.4104,0.8468,0.1831,104.7413,193.4885,221.5702,339.1912,1.0,0.0,0.0,0.0,47.8653,14.4898,2.3933,0.7245
+Flexible MC,0.7,0.4661,0.7181,0.2458,0.7218,0.2439,0.9503,0.1473,296.5397,263.992,557.7699,436.3218,4.0,0.0,0.0,0.0,46.5027,13.9048,2.3251,0.6952

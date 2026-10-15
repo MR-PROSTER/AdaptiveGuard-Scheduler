@@ -26,6 +26,7 @@ class CPU:
 
     def assign_job(self, job: Job, current_time: float) -> None:
         """Assign a job to start running on the CPU."""
+        assert not job.completed, f"Completed job {job.job_id} cannot execute further on CPU!"
         if self.is_idle():
             self.total_idle_time += current_time - self._last_state_change_time
             self._last_state_change_time = current_time
@@ -47,6 +48,10 @@ class CPU:
         """
         if self.current_job is None or duration <= 0:
             return 0.0
+
+        assert not self.current_job.completed, (
+            f"Completed job {self.current_job.job_id} cannot execute further on CPU!"
+        )
 
         effective_duration = duration * self.speed
         actual_exec = self.current_job.execute(effective_duration)

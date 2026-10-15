@@ -26,8 +26,8 @@ def calculate_utility_metrics(
             service_fraction = 1.0
         else:
             exec_sum = sum(j.executed_time for j in task_completed)
-            req_sum = sum(j.required_execution for j in task_released)
-            service_fraction = (exec_sum / req_sum) if req_sum > 0 else 0.0
+            req_sum = sum(getattr(j, "nominal_execution", j.task.C_LO) for j in task_released)
+            service_fraction = min(1.0, (exec_sum / req_sum)) if req_sum > 0 else 0.0
 
         lo_utility += task.utility * service_fraction
 

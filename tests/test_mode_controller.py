@@ -134,3 +134,25 @@ def test_transition_recovery_to_hi():
     assert mode == SystemMode.HI
     assert mc.transitions[0].old_mode == SystemMode.RECOVERY
     assert mc.transitions[0].new_mode == SystemMode.HI
+
+
+def test_transition_recovery_to_lo():
+    """Verify RECOVERY -> LO transition when recovery_completed=True and risk < 0.40."""
+    mc = AdaptiveGuardModeController(initial_mode=SystemMode.RECOVERY)
+    mode = mc.update(
+        current_time=30.0,
+        risk=0.20,
+        recovery_completed=True,
+        r_util=0.20,
+        r_laxity=0.0,
+        r_overrun=0.0,
+        r_deadline=0.0,
+    )
+    assert mode == SystemMode.LO
+    assert len(mc.transitions) == 1
+    trans = mc.transitions[0]
+    assert trans.old_mode == SystemMode.RECOVERY
+    assert trans.new_mode == SystemMode.LO
+    assert trans.risk == 0.20
+    assert trans.r_util == 0.20
+    assert "Recovery completed" in trans.reason
